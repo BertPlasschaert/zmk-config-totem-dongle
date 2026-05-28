@@ -18,6 +18,7 @@
 #define NAV  1
 #define SYM  2
 #define ADJ  3
+#define MAC  4
 
 &mt {
     quick-tap-ms = <100>;
@@ -34,6 +35,12 @@
             timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
+        };
+
+        combo_mac_toggle {
+            timeout-ms = <50>;
+            key-positions = <20 31>;
+            bindings = <&tog MAC>;
         };
     };
 
@@ -141,6 +148,24 @@
         &bootloader  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
 &trans  &trans       &trans        &trans     &trans          &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                    &trans     &trans          &trans    &trans  &trans  &trans
+            >;
+        };
+        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+
+        mac_layer {
+            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+
+            label = "MAC";
+
+            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+            // Overlay on BASE: only LGUI<->LCTRL and RGUI<->RCTRL are swapped.
+            // Toggle with ` + \ combo. All other keys pass through to BASE.
+
+            bindings = <
+                        &trans       &trans      &trans            &trans       &trans    &trans   &trans       &trans      &trans          &trans
+                        &mt LCTRL A  &trans      &mt LGUI D        &trans       &trans    &trans   &trans       &mt RGUI K  &trans          &mt RCTRL SEMI
+            &trans      &trans       &trans      &trans            &trans       &trans    &trans   &trans       &trans      &trans          &trans          &trans
+                                                 &trans            &trans       &trans    &trans   &trans       &trans
             >;
         };
     };
