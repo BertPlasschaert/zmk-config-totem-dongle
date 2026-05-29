@@ -2,11 +2,11 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define BASE 0
-#define NAV  1
-#define SYM  2
-#define ADJ  3
-#define BASE_MAC 4
+#define BASE    0
+#define NAV     1
+#define SYM     2
+#define ADJ     3
+#define MAC     4
 
 &mt {
     quick-tap-ms = <100>;
@@ -26,15 +26,8 @@
         };
 
         To_Mac {
-            bindings = <&to 4>;
+            bindings = <&tog 4>;
             key-positions = <20 31>;
-            layers = <0>;
-        };
-
-        To_Win {
-            bindings = <&to 0>;
-            key-positions = <20 31>;
-            layers = <4>;
         };
     };
 
@@ -93,19 +86,19 @@
         };
 
 
-        base_mac_layer {
+        mac_layer {
 
-            label = "BASE_MAC";
-
+            label = "MAC";
 
             bindings = <
-               &kp Q        &kp W       &kp E             &kp R        &kp T      &kp Y    &kp U        &kp I       &kp O       &kp P
-               &mt LCTRL A  &mt LALT S  &mt LCMD D        &mt LSHFT F  &kp G      &kp H    &mt RSHFT J  &mt RCMD K  &mt RALT L  &mt RIGHT_CONTROL SEMI
-&mt ESC GRAVE  &kp Z        &kp X       &kp C             &kp V        &kp B      &kp N    &kp M        &kp COMMA   &kp DOT     &kp FSLH                &kp BSLH
-                                        &mt ENTER DELETE  &lt 1 SPACE  &kp TAB    &kp ESC  &lt 2 ENTER  &kp BSPC
+               &trans       &trans  &trans      &trans  &trans    &trans  &trans  &trans      &trans  &trans
+               &mt LCTRL A  &trans  &mt LGUI D  &trans  &trans    &trans  &trans  &mt RGUI K  &trans  &mt RCTRL SEMI
+&trans         &trans       &trans  &trans      &trans  &trans    &trans  &trans  &trans      &trans  &trans          &trans
+                                    &trans      &trans  &trans    &trans  &trans  &trans
             >;
         };
 
     };
 };
+
 
