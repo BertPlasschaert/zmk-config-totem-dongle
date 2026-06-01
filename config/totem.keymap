@@ -33,10 +33,9 @@
 
     keymap {
         compatible = "zmk,keymap";
+
         base_layer {
-
             label = "BASE";
-
             bindings = <
                &kp Q       &kp W       &kp E             &kp R        &kp T      &kp Y    &kp U        &kp I        &kp O       &kp P
                &mt LGUI A  &mt LALT S  &mt LCTRL D       &mt LSHFT F  &kp G      &kp H    &mt RSHFT J  &mt RCTRL K  &mt RALT L  &mt RGUI SEMI
@@ -46,10 +45,7 @@
         };
 
         nav_layer {
-
             label = "NAVI";
-
-
             bindings = <
           &kp C_VOLUME_UP    &bt BT_CLR           &kp UP_ARROW      &kp EQUAL            &kp LEFT_BRACKET        &kp RIGHT_BRACKET      &kp NUMBER_7             &kp NUMBER_8  &kp NUMBER_9            &kp PLUS
           &kp C_VOLUME_DOWN  &mt HOME LEFT_ARROW  &kp DOWN          &mt END RIGHT_ARROW  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &mt LEFT_SHIFT NUMBER_4  &mt RCTRL N5  &mt RIGHT_ALT NUMBER_6  &mt RGUI MINUS
@@ -58,11 +54,8 @@
             >;
         };
 
-
         sim_layer {
-
             label = "SYM";
-
             bindings = <
                         &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT         &kp CARET  &kp AMPS        &kp ASTERISK  &kp SQT     &kp DQT
                         &trans    &trans  &trans    &trans    &kp UNDERSCORE    &kp MINUS  &kp LS(RA(N4))  &kp RA(N5)    &kp RA(N4)  &kp EQUAL
@@ -71,12 +64,8 @@
             >;
         };
 
-
         adjust_layer {
-
             label = "ADJ";
-
-
             bindings = <
         &sys_reset   &trans        &trans     &trans          &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12
         &bootloader  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
@@ -85,20 +74,14 @@
             >;
         };
 
-
         mac_layer {
-
             label = "MAC";
-
             bindings = <
-               &trans       &trans  &trans      &trans  &trans    &trans  &trans  &trans      &trans  &trans
-               &mt LCTRL A  &trans  &mt LGUI D  &trans  &trans    &trans  &trans  &mt RGUI K  &trans  &mt RCTRL SEMI
-&trans         &trans       &trans  &trans      &trans  &trans    &trans  &trans  &trans      &trans  &trans          &trans
-                                    &trans      &trans  &trans    &trans  &trans  &trans
+        &trans      &trans  &trans       &trans  &trans    &trans  &trans  &trans       &trans  &trans
+        &mt LWIN A  &trans  &mt LCTRL D  &trans  &trans    &trans  &trans  &mt RCTRL K  &trans  &mt RGUI SEMI
+&trans  &trans      &trans  &trans       &trans  &trans    &trans  &trans  &trans       &trans  &trans         &trans
+                            &trans       &trans  &trans    &trans  &trans  &trans
             >;
         };
-
     };
 };
-
-
